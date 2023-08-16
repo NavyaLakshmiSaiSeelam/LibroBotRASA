@@ -1,0 +1,136 @@
+version: "2.0"
+
+intents:
+  - search_books
+  - get_book_details
+  - library_hours
+  - library_location
+  - books_available
+  - books_recommendation_CSE
+  - borrow_books
+  - submit_books
+  - late_submission
+  - ebooks_available
+  - new_books
+  - library_wifi
+  - greet
+  - goodbye
+  - mood_great
+  - mood_unhappy
+  - affirm
+  - deny
+  - thanks
+  - default
+  - inquire_book_availability
+
+
+
+entities:
+  - book_title
+
+
+
+responses:
+
+  utter_library_hours:
+    - text: "the library timings is 10AM to 10PM from Monday to Saturday!"
+
+  utter_library_location:
+    - text: "the library is located at behind the academic blocks and in-front of Workshop block!"
+
+  utter_books_available:
+    - text: "Please tell me what books you are looking for : "
+
+  utter_books_recommendation_CSE:
+    - text: "Here are some popular books in the field of computer science engineering:
+
+        1. Introduction to Algorithms by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein
+        2. The Pragmatic Programmer by Andrew Hunt, David Thomas
+        3. Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin
+        4. Design Patterns: Elements of Reusable Object-Oriented Software by Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
+        5. Cracking the Coding Interview by Gayle Laakmann McDowell
+        And there are many other books
+        
+        here are some popular books available :
+            1. Artificial Intelligence: A Modern Approach by Stuart Russell, Peter Norvig
+            2. Operating System Concepts by Abraham Silberschatz, Peter B. Galvin, Greg Gagne
+            3. Database System Concepts by Abraham Silberschatz, Henry F. Korth, S. Sudarshan
+            4. Computer Networks by Andrew S. Tanenbaum, David J. Wetherall
+            5. Computer Organization and Design by David A. Patterson, John L. Hennessy "
+
+
+  utter_borrow_books:
+    - text: "You can borrow any books from the library in the library hours and you have to strictly submit it after 1 month."
+
+  utter_submit_books:
+    - text: "You have submit it before the 1 month of the day you borrowed.Otherwise you have to pay for it"
+
+  utter_ebooks_available:
+    - text: " Sorry currently we couldn't provide any ebooks "
+
+  utter_late_submission:
+    - text: "you have to pay for it as 2 rs for each extra day "
+    - text: "pay for the amount of extra days * 2 rs for day "
+
+  utter_library_wifi:
+    - text: "The wifi is available and its name:Librarywifi password is: akngr123"
+
+  utter_new_books:
+    - text: " the latest trending technologies books are :
+    
+          1. Artificial Intelligence: A Modern Approach by Stuart Russell and Peter Norvig
+          2. Machine Learning Yearning by Andrew Ng
+          3. Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville
+          4. Blockchain Basics: A Non-Technical Introduction in 25 Steps by Daniel Drescher
+          5. The Big Nine: How the Tech Titans and Their Thinking Machines Could Warp Humanity by Amy Webb"
+
+    - text: "the trending technologies books are :
+          1. The Fourth Industrial Revolution by Klaus Schwab
+          2. Human Compatible: Artificial Intelligence and the Problem of Control by Stuart Russell
+          3. The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution by Walter Isaacson
+          4. The Industries of the Future by Alec Ross
+          5. Sapiens: A Brief History of Humankind by Yuval Noah Harari"
+
+  utter_competitive_books:
+    - text: " What type of exams are you preparing for?"
+    - text: " Which type of books you want?"
+    - text: " What competitive exams are you preparing for?"
+    - text: " If you are preparing for the competitive exam I can recommend you some books."
+
+  utter_gate_books:
+    - text: " Gate books are available in 1st floor 2nd shelf . You can find separate preparation books for each branch"
+
+  utter_upsc_books:
+    - text: " UPSC books are available in 1st floor 3rd shelf."
+#    - text: " Are you looking for any specific UPSC book."
+    - text: " The book are available at 1st floor Competitive shelf ."
+
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+    - text: "Hello! How is your day?"
+    - text: "Hello! What service do you want from this lovely chatbot."
+    - text: "Hello! Happy to have you here. What do you want me to do."
+    - text: "Hello! How are you doing? How can I help you?"
+    - text: "Hello! I am a good book recommender. Can I recommend you any book."
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+
+  utter_mood_great:
+    - text: "Enjoy your day by reading your favourite books!"
+
+  utter_mood_unhappy:
+    - text: "I think your bad day is going to be happy by reading your favourite books!"
+
+  utter_thanks:
+    - text: "You're welcome!"
+
+  utter_default:
+    - text: "I'm sorry, I didn't understand. Can you please rephrase your request?"
+
+actions:
+  - action_search_books
+  - action_get_book_details
+  - action_book_availability
+
+

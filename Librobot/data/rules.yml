@@ -1,0 +1,121 @@
+version: "2.0"
+
+rules:
+- rule: Handle search_books intent
+  steps:
+  - intent: search_books
+  - action: action_search_books
+
+- rule: Handle get_book_details intent
+  steps:
+  - intent: get_book_details
+  - action: action_get_book_details
+
+- rule: Respond to greetings
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Respond to goodbyes
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Respond to affirmations
+  steps:
+  - intent: affirm
+  - action: utter_thanks
+
+- rule: Respond to denials
+  steps:
+  - intent: deny
+  - action: utter_default
+
+- rule: Respond to thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Respond to  library hours
+  steps:
+  - intent: library_hours
+  - action: utter_library_hours
+
+- rule: Respond to library location
+  steps:
+  - intent: library_location
+  - action: utter_library_location
+
+- rule: Respond to books available
+  steps:
+  - intent: books_available
+  - action: utter_books_available
+
+- rule: Respond to books recommendation CSE
+  steps:
+  - intent: books_recommendation_CSE
+  - action: utter_books_recommendation_CSE
+
+- rule: Respond to borrow books
+  steps:
+  - intent: borrow_books
+  - action: utter_borrow_books
+
+- rule: Respond to submit books
+  steps:
+  - intent: submit_books
+  - action: utter_submit_books
+
+- rule: Respond to late submissions
+  steps:
+  - intent: late_submission
+  - action: utter_late_submission
+
+- rule: Respond to ebooks available
+  steps:
+  - intent: ebooks_available
+  - action: utter_ebooks_available
+
+- rule: Respond to library_wifi
+  steps:
+  - intent: library_wifi
+  - action: utter_library_wifi
+
+- rule: Respond to new_books
+  steps:
+  - intent: new_books
+  - action: utter_new_books
+
+- rule: Respond to competitive_books
+  steps:
+  - intent: competitive_books
+  - action: utter_competitive_books
+
+- rule: Respond to gate_books
+  steps:
+  - intent: gate_books
+  - action: utter_gate_books
+
+- rule: Respond to upsc_books
+  steps:
+  - intent: upsc_books
+  - action: utter_upsc_books
+
+- rule: Respond to happy greetings
+  steps:
+  - intent: mood_great
+  - action: utter_mood_great
+
+- rule: Respond to sad greetings
+  steps:
+  - intent: mood_unhappy
+  - action: utter_mood_unhappy
+
+- rule: Fallback rule
+  steps:
+  - action: utter_default
+
+- rule: Default rule
+  steps:
+  - intent: default
+  - action: utter_default

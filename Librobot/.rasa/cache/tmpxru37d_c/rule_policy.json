@@ -1,0 +1,31 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_book_details\"}}]": "action_get_book_details",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"get_book_details\"}}, {\"prev_action\": {\"action_name\": \"action_get_book_details\"}, \"user\": {\"intent\": \"get_book_details\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_books\"}}]": "action_search_books",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"search_books\"}}, {\"prev_action\": {\"action_name\": \"action_search_books\"}, \"user\": {\"intent\": \"search_books\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"default\"}}]": "utter_default",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"default\"}}, {\"prev_action\": {\"action_name\": \"utter_default\"}, \"user\": {\"intent\": \"default\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"thanks\"}}]": "utter_thanks",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"thanks\"}}, {\"prev_action\": {\"action_name\": \"utter_thanks\"}, \"user\": {\"intent\": \"thanks\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}]": "utter_thanks",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"affirm\"}}, {\"prev_action\": {\"action_name\": \"utter_thanks\"}, \"user\": {\"intent\": \"affirm\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}]": "utter_default",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}, {\"prev_action\": {\"action_name\": \"utter_default\"}, \"user\": {\"intent\": \"deny\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"utter_default\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "predicting default action with intent back",
+      "predicting default action with intent restart"
+    ]
+  }
+}
